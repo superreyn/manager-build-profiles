@@ -11,6 +11,7 @@ When using this repository as a source, do not forget to add a valid sub directo
 * SLE12 templates
   * POS_Image-JeOS6 -> https://github.com/SUSE/manager-build-profiles#master:OSImage/POS_Image-JeOS6
   * POS_Image-Graphical6 -> https://github.com/SUSE/manager-build-profiles#master:OSImage/POS_Image-Graphical6
+  * BPS GUI -> https://github.com/dvosburg/manager-build-profiles#BassPro:OSImage/POS_Image-Graphical6
 
 * SLE15 templates
   * POS_Image-JeOS7 -> https://github.com/SUSE/manager-build-profiles#master:OSImage/POS_Image-JeOS7
