@@ -26,10 +26,6 @@
 	</type>
     </preferences>
 
-    <oemconfig>
-      <oem-resize>true</oem-resize>
-    </oemconfig>	    
-
       <!-- Add root and guest users -->
       <users>
         <user
