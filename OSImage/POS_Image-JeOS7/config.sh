@@ -102,8 +102,8 @@ echo '** Update sysconfig entries...'
 
 baseUpdateSysConfig /etc/sysconfig/network/dhcp DHCLIENT_SET_HOSTNAME yes
 
-# Enable firewalld
-chkconfig firewalld on
+# Disable firewalld
+chkconfig firewalld off
 
 # Set GRUB2 to boot graphically (bsc#1097428)
 sed -Ei"" "s/#?GRUB_TERMINAL=.+$/GRUB_TERMINAL=gfxterm/g" /etc/default/grub
