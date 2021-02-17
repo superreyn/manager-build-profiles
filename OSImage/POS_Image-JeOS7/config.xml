@@ -19,9 +19,9 @@
 
         <rpm-excludedocs>true</rpm-excludedocs>
 	<type filesystem="ext4" image="oem" format="qcow2" initrd_system="dracut">
+	  <size unit="G" additive="true" unpartitioned="5">30</size>	
           <oemconfig>
 	    <oem-resize>true</oem-resize>
-            <oem-systemsize>8192</oem-systemsize>
           </oemconfig>
 	</type>
     </preferences>
