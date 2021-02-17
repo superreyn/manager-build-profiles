@@ -2,8 +2,8 @@
 
 <image schemaversion="6.1" name="POS_Image_JeOS7">
     <description type="system">
-        <author>Admin User</author>
-        <contact>noemail@example.com</contact>
+        <author>Cameron Seader</author>
+        <contact>cseader@suse.com</contact>
         <specification>SUSE Linux Enterprise 15 SP2 JeOS</specification>
     </description>
     <preferences>
@@ -18,7 +18,7 @@
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-        <type filesystem="ext3" image="pxe" initrd_system="dracut"></type>
+        <type filesystem="ext3" image="oem" format="qcow2" initrd_system="dracut"></type>
     </preferences>
 
     <packages type="image">
@@ -52,7 +52,10 @@
         <package name="wicked"/>
         <package name="iproute2"/> 
         <package name="openssh"/>
-        <package name="rsync"/>
+	<package name="rsync"/>
+
+	<!-- K3s requirements -->
+	<package name="which">
 
         <!-- Only for btrfs
         <package name="btrfsprogs"/>
