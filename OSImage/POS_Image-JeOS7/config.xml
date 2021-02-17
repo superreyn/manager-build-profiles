@@ -55,7 +55,7 @@
 	<package name="rsync"/>
 
 	<!-- K3s requirements -->
-	<package name="which">
+	<package name="which"/>
 
         <!-- Only for btrfs
         <package name="btrfsprogs"/>
