@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="POS_Image_JeOS7">
+<image schemaversion="6.1" name="sle15-sp2">
     <description type="system">
         <author>Cameron Seader</author>
         <contact>cseader@suse.com</contact>
@@ -19,7 +19,7 @@
 
         <rpm-excludedocs>true</rpm-excludedocs>
 	<type filesystem="ext4" image="oem" format="qcow2" initrd_system="dracut">
-	  <size unit="G" additive="true" unpartitioned="5">30</size>	
+	  <size unit="G" additive="false" >60</size>	
           <oemconfig>
 	    <oem-resize>true</oem-resize>
           </oemconfig>
