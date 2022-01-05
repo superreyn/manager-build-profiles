@@ -4,6 +4,7 @@ Use these scripts as a base for a SLE15 SP3 installations. The system register a
 
 - [sles15-sp3-autoyast.xml](sles15-sp3-autoyast.xml)
 - [sle_sap15-sp3-autoyast.xml](sle_sap15-sp3-autoyast.xml)
+- [sles15-sp3-fromscratch-unfiltered.xml](sles15-sp3-fromscratch-unfiltered.xml)
 
 When using newer SUSE Manager/Uyuni versions (4.2+), you will need to replace the `$distrotree` variable in the AutoYaST profile with your kickstartable distribution tree name.
 
