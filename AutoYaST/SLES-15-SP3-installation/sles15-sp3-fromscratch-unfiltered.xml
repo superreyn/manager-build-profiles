@@ -93,7 +93,6 @@
       <start_multipath config:type="boolean">false</start_multipath>
     </storage>
 
-  
 <!-- configure local storage -->
   <partitioning config:type="list">
     <drive>
