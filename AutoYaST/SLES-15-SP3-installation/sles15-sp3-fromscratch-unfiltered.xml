@@ -5,73 +5,73 @@
     <add_on_products config:type="list">
       <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-manager-tools15-pool-$arch-sp3/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-manager-tools15-pool-$arch-sp3/$distrotree</media_url>
            <name>SLE-Manager-Tools15-Pool for $arch</name>
            <product>sle-manager-tools</product>
         </listentry>
 	    <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-manager-tools15-updates-$arch-sp3/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-manager-tools15-updates-$arch-sp3/$distrotree</media_url>
            <name>SLE-Manager-Tools15-Updates for $arch</name>
            <product>sle-manager-tools</product>
         </listentry>
          <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-basesystem15-sp3-pool-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-basesystem15-sp3-pool-$arch/$distrotree</media_url>
            <name>SLE-Module-Basesystem15-SP3-Pool for $arch</name>
            <product>sle-module-basesystem</product>
         </listentry>
          <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-basesystem15-sp3-updates-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-basesystem15-sp3-updates-$arch/$distrotree</media_url>
            <name>SLE-Module-Basesystem15-SP3-Updates for $arch</name>
            <product>sle-module-basesystem</product>
         </listentry>
         <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-server-applications15-sp3-pool-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-server-applications15-sp3-pool-$arch/$distrotree</media_url>
            <name>SLE-Module-Server-Applications15-SP3-Pool for $arch</name>
            <product>sle-module-server-applications</product>
         </listentry>
          <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-server-applications15-sp3-updates-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-server-applications15-sp3-updates-$arch/$distrotree</media_url>
            <name>SLE-Module-Server-Applications15-SP3-Updates for $arch</name>
            <product>sle-module-server-applications</product>
         </listentry>
         <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-containers15-sp3-pool-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-containers15-sp3-pool-$arch/$distrotree</media_url>
            <name>SLE-Module-Containers-SP3-Pool for $arch</name>
            <product>sle-module-containers</product>
         </listentry>
          <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-containers15-sp3-updates-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-containers15-sp3-updates-$arch/$distrotree</media_url>
            <name>SLE-Module-Containers-SP3-Updates for $arch</name>
            <product>sle-module-containers</product>
         </listentry>
          <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-desktop-applications15-sp3-pool-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-desktop-applications15-sp3-pool-$arch/$distrotree</media_url>
            <name>SLE-Module-Desktop-Applications-SP3-Pool for $arch</name>
            <product>sle-module-desktop-applications</product>
         </listentry>
          <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-desktop-applications15-sp3-updates-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-module-desktop-applications15-sp3-updates-$arch/$distrotree</media_url>
            <name>SLE-Module-Desktop-Applications-SP3-Updates for $arch</name>
            <product>sle-module-desktop-applications</product>
         </listentry>
        <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle-product-sles15-sp3-updates-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle-product-sles15-sp3-updates-$arch/$distrotree</media_url>
            <name>SLE-15-SP3-Updates for $arch</name>
            <product>SLES</product>
         </listentry>
         <listentry>
            <ask_on_error config:type="boolean">true</ask_on_error>
-           <media_url>http://$redhat_management_server/ks/dist/child/sle15-sp3-installer-updates-$arch/$distro_label</media_url>
+           <media_url>http://$redhat_management_server/ks/dist/child/sle15-sp3-installer-updates-$arch/$distrotree</media_url>
            <name>SLE-15-SP3-Installer Updates for $arch</name>
            <product>SLES</product>
         </listentry>
@@ -93,6 +93,7 @@
       <start_multipath config:type="boolean">false</start_multipath>
     </storage>
 
+  
 <!-- configure local storage -->
   <partitioning config:type="list">
     <drive>
