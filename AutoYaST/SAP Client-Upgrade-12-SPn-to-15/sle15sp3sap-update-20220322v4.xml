@@ -256,6 +256,9 @@
       <package>recode</package>                                                   
       <package>xf86-input-void</package>                                          
       <package>yast2-metapackage-handler</package>
+      <!-- orphans harvested from a cloud migration to SLES15 SP3 for SAP --> 
+      <package>libqb0</package>
+      <package>python-ptyprocess</package>    
    </remove-packages>
   </software>
   <backup>
