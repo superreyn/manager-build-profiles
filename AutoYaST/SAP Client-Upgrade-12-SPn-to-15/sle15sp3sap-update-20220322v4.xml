@@ -179,7 +179,6 @@
       <package>autoyast2-installation</package>
       <package>autoyast2</package>
       <package>sle-manager-tools-release</package>
-      <package>ncurses</package>
     </packages>
     <patterns config:type="list">
       <pattern>base</pattern>
@@ -236,7 +235,9 @@
       <package>libjasper1</package>                                               
       <package>libjson-c2-32bit</package>                                         
       <package>libmediaart-2_0-0</package>                                        
-      <package>libmozjs-17_0</package>                                            
+      <package>libmozjs-17_0</package>            
+      <package>libncurses5</package>
+      <package>libncurses5-32bit</package>
       <package>libopenssl1_0_0-32bit</package>                                    
       <package>libpython2_7-1_0-32bit</package>                                   
       <package>libqpdf18</package>                                                
