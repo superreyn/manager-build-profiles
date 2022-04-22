@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE profile>
-<!-- Profile updated by dvosburg at suse dot com 20220325 - SLES for SAP 15 SP3 with CLM prefixed channels -->
+<!-- Profile updated by dvosburg at suse dot com 20220421 - SLES for SAP 15 SP3 with CLM prefixed channels -->
 <profile xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
     <add-on>
     <add_on_products config:type="list">
        <listentry>
         <ask_on_error config:type="boolean">true</ask_on_error>
         #if $channel_prefix != ""
-        <media_url>https://$redhat_management_server/ks/dist/child/$channel_prefix-sle-manager-tools15-updates-$arch-sap-sp3/$distrotree</media_url>
+        <media_url>https://$redhat_management_server/ks/dist/child/$channel_prefix-sle-manager-tools15-beta-updates-$arch-sap-sp3/$distrotree</media_url>
         #else
-        <media_url>https://$redhat_management_server/ks/dist/child/sle-manager-tools15-updates-$arch-sap-sp3/$distrotree</media_url>
+        <media_url>https://$redhat_management_server/ks/dist/child/sle-manager-tools15-beta-updates-$arch-sap-sp3/$distrotree</media_url>
         #end if
-        <name>$channel_prefix SLE-15-Manager-Tools Updates</name>
+        <name>$channel_prefix SLE-15-Manager-Tools BETA Updates</name>
         <product>sle-manager-tools</product>
       </listentry>
       <listentry>
@@ -277,6 +277,8 @@
       <package>autoyast2-installation</package>
       <package>autoyast2</package>
       <package>sle-manager-tools-release</package>
+      <!-- added to fix samba dependencies -->
+      <package>libldb2</package>
     </packages>
     <patterns config:type="list">
       <pattern>base</pattern>
@@ -357,8 +359,38 @@
       <package>yast2-metapackage-handler</package>
       <!-- orphans harvested from a cloud migration to SLES15 SP3 for SAP --> 
       <package>libqb0</package>
-      <package>python-ptyprocess</package>    
-   </remove-packages>
+      <package>python-ptyprocess</package>
+      <package>opie</package>
+      <package>gutenprint</package>
+      <package>perl-32bit</package>
+      <package>libftgl2</package>
+      <!-- samba deprecated packages and others in SLES15 SP3 for SAP -->
+      <package>libsmbldap2</package>
+      <package>libsmbldap0</package>
+      <package>libsmbldap0-32bit</package>
+      <package>libtevent-util0</package>
+      <package>libsamdb0</package>
+      <package>libndr-nbt0</package>
+      <package>libnetapi0</package>
+      <package>libsamba-errors0</package>
+      <package>libsamba-credentials0</package>
+      <package>libdcerpc0</package>
+      <package>libsamba-util0</package>
+      <package>libsamba-passdb0</package>
+      <package>libndr-standard0</package>
+      <package>libndr1</package>
+      <package>libndr0</package>
+      <package>libndr0-32bit</package>
+      <package>libsamba-hostconfig0</package>
+      <package>libwbclient0</package>
+      <package>libdcerpc-binding0</package>
+      <package>libsmbclient0</package>
+      <package>libndr-krb5pac0</package>
+      <package>libsmbconf0</package>
+      <package>samba-libs-32bit</package>
+      <package>python3-ldb</package>
+      <package>sle-manager-tools-release</package>
+     </remove-packages>
   </software>
   <backup>
     <sysconfig config:type="boolean">true</sysconfig>
@@ -380,6 +412,7 @@
   </signature-handling>
   <mode>
     <confirm config:type="boolean">false</confirm>
+	<second_stage config:type="boolean">false</second_stage>
   </mode>
 </general>
 <scripts>
@@ -491,6 +524,7 @@ rm -rf /etc/zypp/repos.d/http* > /tmp/removed-at-init
 rm -rf /etc/grub.d/42_uyuni_reinstall
 rm -rf /boot/uyuni-reinstall-kernel /boot/uyuni-reinstall-initrd
 /usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg
+# end reinstallation cleanup
 systemctl stop salt-minion
 sleep 10
 systemctl start salt-minion
