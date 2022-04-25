@@ -4,15 +4,15 @@
 <profile xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
     <add-on>
     <add_on_products config:type="list">
-	<listentry>
-        <ask_on_error config:type="boolean">true</ask_on_error>
-        #if $channel_prefix != ""
-        <media_url>https://$redhat_management_server/ks/dist/child/$channel_prefix-sle-manager-tools15-pool-$arch-sap-sp3/$distrotree</media_url>
-        #else
-        <media_url>https://$redhat_management_server/ks/dist/child/sle-manager-tools15-pool-$arch-sap-sp3/$distrotree</media_url>
-        #end if
-        <name>$channel_prefix SLE-15-Manager-Tools Pool</name>
-        <product>sle-manager-tools</product>
+       <listentry>
+          <ask_on_error config:type="boolean">true</ask_on_error>
+          #if $channel_prefix != ""
+          <media_url>https://$redhat_management_server/ks/dist/child/$channel_prefix-sle-manager-tools15-pool-$arch-sap-sp3/$distrotree</media_url>
+          #else
+          <media_url>https://$redhat_management_server/ks/dist/child/sle-manager-tools15-pool-$arch-sap-sp3/$distrotree</media_url>
+          #end if
+          <name>$channel_prefix SLE-15-Manager-Tools Pool</name>
+          <product>sle-manager-tools</product>
        </listentry>
        <listentry>
         <ask_on_error config:type="boolean">true</ask_on_error>
