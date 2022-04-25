@@ -12,7 +12,8 @@
         <media_url>https://$redhat_management_server/ks/dist/child/sle-manager-tools15-pool-$arch-sap-sp3/$distrotree</media_url>
         #end if
         <name>$channel_prefix SLE-15-Manager-Tools Pool</name>
-        <product>sle-manager-tools</product>    
+        <product>sle-manager-tools</product>
+       </listentry>
        <listentry>
         <ask_on_error config:type="boolean">true</ask_on_error>
         #if $channel_prefix != ""
