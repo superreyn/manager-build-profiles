@@ -301,7 +301,8 @@ registration_key='activation_key_for_post_upgrade'
       <accept_non_trusted_gpg_key   config:type="boolean">true</accept_non_trusted_gpg_key>
      </signature-handling>
   <mode>
-    <confirm config:type="boolean">false</confirm>
+	  <confirm config:type="boolean">false</confirm>
+<!-- Second stage not required for system autoupgrade  -->
     <second_stage config:type="boolean">false</second_stage>
   </mode>
   </general>
@@ -414,6 +415,7 @@ registration_key='activation_key_for_post_upgrade'
   </backup>
  <scripts>
   <pre-scripts config:type="list">
+<!-- Script to install the certificate from SUMA needed for the repos -->
     <script>
         <filename>01_install_cert.sh</filename>
         <source><![CDATA[
@@ -424,6 +426,7 @@ mv RHN-ORG-TRUSTED-SSL-CERT /etc/pki/trust/anchors/
    </script>
   </pre-scripts>
   <chroot-scripts config:type="list">
+<!-- chroot script to install the certificate from SUMA needed for the repos -->
     <script>
         <filename>chroot.sh</filename>
         <source><![CDATA[
@@ -437,6 +440,7 @@ mv RHN-ORG-TRUSTED-SSL-CERT /mnt/etc/pki/trust/anchors/
       </script>
     </chroot-scripts>
   <init-scripts config:type="list">
+<!-- Script to handle registration and cleanup -->
   <script>
     <filename>uyuni-minion2.sh</filename>
     <source>
